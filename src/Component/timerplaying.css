@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 500;
+    
+    }
+.timer-container{
+    background-color: rgb(17, 24, 20);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.timer-container .firma{
+    background-color: #f7f7f7;
+    /* padding: 20px; */
+    width: 100vw;
+}
+
+.row .datum .col{
+    background-color: rgb(240, 235, 235);
+   padding: 20px;
+   margin-top: 40px;
+}
+
+input[type="time" i]::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+input[type="date" i]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+
+select:focus-visible{
+    border :3px solid  rgb(6, 167, 167);
+    outline: none;
+}
+.images{
+    width: 100px;
+    height: 40px;
+
+}
+
+
+@media (max-width: 768px) {
+    .timer-container {
+        flex-direction: column;
+    }
+
+    .firma, .datum {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .col {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    svg circle {
+        r: 85; /* reduce radius for mobile */
+    }
+
+    .btn, input[type="text"], input[type="time"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .firma {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .images {
+        width: 60px;
+    }
+
+    .datum span {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
